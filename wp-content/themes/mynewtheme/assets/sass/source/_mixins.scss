@@ -1,0 +1,687 @@
+@mixin lib-vendor-prefix-display(
+  $_value: flex
+) {
+  display: -webkit-#{$_value};
+  display: -ms-#{$_value}box;
+  display: $_value;
+}
+
+@mixin lib-vendor-prefix-flex-grow(
+  $_value: 0
+) {
+  -webkit-flex-grow: $_value;
+  flex-grow: $_value;
+}
+
+@mixin lib-vendor-prefix-flex-shrink(
+  $_value: 1
+) {
+  -webkit-flex-shrink: $_value;
+  flex-shrink: $_value;
+}
+
+@mixin lib-vendor-prefix-flex-basis(
+  $_value: auto
+) {
+  -webkit-flex-basis: $_value;
+  flex-basis: $_value;
+}
+
+@mixin lib-vendor-prefix-flex-wrap(
+  $_value: wrap
+) {
+  -webkit-flex-wrap: $_value;
+  flex-wrap: $_value;
+}
+
+@mixin lib-vendor-prefix-flex-direction(
+  $_value: column
+) {
+  -webkit-flex-direction: $_value;
+  -ms-flex-direction: $_value;
+  flex-direction: $_value;
+}
+
+@mixin lib-vendor-prefix-order(
+  $_value: 0
+) {
+  -ms-flex-order: $_value;
+  -webkit-order: $_value;
+  order: $_value;
+}
+
+@mixin lib-vendor-box-align(
+  $_value: stretch
+) {
+  -webkit-align-items: $_value;
+  -ms-align-items: $_value;
+  align-items: $_value;
+}
+
+@mixin lib-vendor-prefix-appearance(
+  $_value: none
+) {
+  -webkit-appearance: $_value;
+  -moz-appearance: $_value;
+  appearance: $_value;
+}
+
+@mixin lib-vendor-prefix-column-count(
+  $_value
+) {
+  -webkit-column-count: $_value;
+  -moz-column-count: $_value;
+  column-count: $_value;
+}
+
+@mixin lib-css(
+  $_property,
+  $_value,
+  $_prefix: 0
+) {
+  @if $_prefix == 1 and $_value != '' and $_value != false {
+    display: -webkit-#{$_value};
+    display: -ms-#{$_value}box;
+    display: $_value;
+  } @else if $_prefix == 0 and $_value != '' and $_value != false {
+    #{$_property}: $_value;
+  }
+}
+
+@mixin lib-input-placeholder(
+  $_input-placeholder-color: $form-element-input-placeholder__color,
+  $_input-placeholder-font-weight: $font-weight__regular,
+  $_input-placeholder-font-size: $font-size__base,
+
+) {
+  &::-webkit-input-placeholder {
+    @include lib-css(color, $_input-placeholder-color);
+    @include lib-css(font-weight, $_input-placeholder-font-weight);
+    @include lib-css(font-size, $_input-placeholder-font-size);
+    @include lib-css(font-family, "Montserrat", sans-serif);
+  }
+
+  &:-moz-placeholder {
+    @include lib-css(color, $_input-placeholder-color);
+    @include lib-css(font-weight, $_input-placeholder-font-weight);
+    @include lib-css(font-size, $_input-placeholder-font-size);
+    @include lib-css(font-family, "Montserrat", sans-serif);
+  }
+
+  &::-moz-placeholder {
+    @include lib-css(color, $_input-placeholder-color);
+    @include lib-css(font-weight, $_input-placeholder-font-weight);
+    @include lib-css(font-size, $_input-placeholder-font-size);
+    @include lib-css(font-family, "Montserrat", sans-serif);
+  }
+
+  &:-ms-input-placeholder {
+    @include lib-css(color, $_input-placeholder-color);
+    @include lib-css(font-weight, $_input-placeholder-font-weight);
+    @include lib-css(font-size, $_input-placeholder-font-size);
+    @include lib-css(font-family, "Montserrat", sans-serif);
+  }
+  &:focus {
+    @include lib-css(font-size, $_input-placeholder-font-weight);
+  }
+  &:-moz-focusring {
+    @include lib-css(font-size, $_input-placeholder-font-weight);
+  }
+}
+
+@mixin lib-job-input-placeholder(
+  $_input-placeholder-color: $color-wishly-blue,
+  $_input-placeholder-font-weight: $font-weight__regular,
+  $_input-placeholder-font-size: $font-size__base,
+  $_input-placeholder-background-color: $color-unset
+) {
+  &::-webkit-input-placeholder {
+    @include lib-css(color, $_input-placeholder-color);
+    @include lib-css(font-weight, $_input-placeholder-font-weight);
+    @include lib-css(font-size, $_input-placeholder-font-size);
+    @include lib-css(background-color, $_input-placeholder-background-color);
+    @include lib-css(font-family, "Montserrat", sans-serif);
+  }
+
+  &:-moz-placeholder {
+    @include lib-css(color, $_input-placeholder-color);
+    @include lib-css(font-weight, $_input-placeholder-font-weight);
+    @include lib-css(font-size, $_input-placeholder-font-size);
+    @include lib-css(background-color, $_input-placeholder-background-color);
+    @include lib-css(font-family, "Montserrat", sans-serif);
+  }
+
+  &::-moz-placeholder {
+    @include lib-css(color, $_input-placeholder-color);
+    @include lib-css(font-weight, $_input-placeholder-font-weight);
+    @include lib-css(font-size, $_input-placeholder-font-size);
+    @include lib-css(background-color, $_input-placeholder-background-color);
+    @include lib-css(font-family, "Montserrat", sans-serif);
+  }
+
+  &:-ms-input-placeholder {
+    @include lib-css(color, $_input-placeholder-color);
+    @include lib-css(font-weight, $_input-placeholder-font-weight);
+    @include lib-css(font-size, $_input-placeholder-font-size);
+    @include lib-css(background-color, $_input-placeholder-background-color);
+    @include lib-css(font-family, "Montserrat", sans-serif);
+  }
+}
+
+@mixin lib-visibility-hidden() {
+  height: 0;
+  visibility: hidden;
+}
+
+@mixin lib-visually-hidden() {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin lib-visually-hidden-reset() {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+@mixin lib-clearfix() {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin lib-clearer() {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin lib-rotate($_rotation) {
+  -webkit-transform: rotate($_rotation); //  Use in 8 Safari
+  -ms-transform: rotate($_rotation); //  Use in 9 IE
+  transform: rotate($_rotation);
+}
+
+@mixin lib-rotate-x-y($_rotation, $skew-y) {
+  -webkit-transform: rotate($_rotation) skewY($skew-y); //  Use in 8 Safari
+  -ms-transform: rotate($_rotation) skewY($skew-y); //  Use in 9 IE
+  transform: rotate($_rotation) skewY($skew-y);
+}
+
+@mixin lib-rotate-y($skew-y) {
+  -webkit-transform: skewY($skew-y); //  Use in 8 Safari
+  -ms-transform: skewY($skew-y); //  Use in 9 IE
+  transform: skewY($skew-y);
+}
+
+@mixin lib-inline-block-space-container() {
+  font-size: 0;
+  letter-spacing: -1px;
+  line-height: 0;
+}
+
+@mixin lib-font-face(
+  $family-name,
+  $font-path,
+  $font-weight: normal,
+  $font-style: normal,
+  $font-display: auto
+) {
+  font-family: $family-name;
+  src: url('#{$baseDirFonts}#{$font-path}.eot?21831q');
+  src: url('#{$baseDirFonts}#{$font-path}.eot?21831q#iefix') format('embedded-opentype'),
+  url('#{$baseDirFonts}#{$font-path}.ttf?21831q') format('truetype'),
+  url('#{$baseDirFonts}#{$font-path}.woff?21831q') format('woff'),
+  url('#{$baseDirFonts}#{$font-path}.svg?21831q#icomoon') format('svg');
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-display: $font-display;
+}
+
+@mixin lib-font-face-path(
+  $family-name,
+  $font-path,
+  $local,
+  $font-format,
+  $font-weight: normal,
+  $font-style: normal,
+  $font-display: swap
+){
+  font-family: $family-name;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  src: local($local), local($local), url($font-path) format($font-format);
+  font-display: $font-display;
+}
+
+@mixin lib-text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin lib-text-hide() {
+  background-color: transparent;
+  border: 0;
+  color: transparent;
+  text-shadow: none;
+}
+
+@mixin lib-reset-spacing($_margin: 0, $_padding: 0) {
+  @include lib-css(margin, $_margin);
+  @include lib-css(padding, $_padding);
+}
+
+@mixin lib-list-reset-styles($_margin: 0, $_padding: 0) {
+  @include lib-css(margin, $_margin);
+  @include lib-css(padding, $_padding);
+  list-style: none none;
+}
+
+@mixin lib-list-inline() {
+  @include lib-list-reset-styles;
+
+  > li {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@mixin lib-font-size(
+  $sizeValue
+) {
+  @include lib-css(font-size, rem($sizeValue));
+}
+
+@mixin lib-line-height(
+  $sizeValue
+) {
+  @include lib-css(line-height, rem($sizeValue));
+}
+
+@mixin lib-text-decoration-none() {
+  text-decoration: none;
+}
+
+@mixin lib-transition(
+  $_property: all,
+  $_function: null,
+  $_duration: $default-transition,
+) {
+  @include lib-css(transition, $_property $_duration $_function);
+}
+
+@mixin lib-icon-font(
+  $_icon-font-content,
+  $_icon-font-size: $icon-font__size,
+  $_icon-font-color: $icon-font__color,
+  $_icon-font-color-hover: $icon-font__color-hover,
+  $_icon-font-display: $icon-font-display,
+  $_icon-font-position: 'before',
+  $_icon-font-vertical-align: $icon-font-vertical-align,
+  $_icon-font-transition: $icon-font-transition,
+  $_icon-font-line-height: $_icon-font-size,
+  $_font: $default-icon-font,
+  $_icon-font-content-hover: false
+) {
+
+  &:#{$_icon-font-position} {
+    @include lib-css(content, $_icon-font-content);
+    @include lib-transition(color);
+    @include lib-css(display, $_icon-font-display);
+    @include lib-font-size($_icon-font-size);
+    @include lib-line-height($_icon-font-line-height);
+    @include lib-css(vertical-align, $_icon-font-vertical-align);
+    @include lib-css(color, $_icon-font-color);
+    @include lib-css(font-family, $_font);
+    @include lib-css(width, $_icon-font-size);
+    @include lib-css(height, $_icon-font-size);
+  }
+
+  &:hover {
+    &:#{$_icon-font-position} {
+      @include lib-css(color, $_icon-font-color-hover);
+      @if $_icon-font-content-hover != false {
+        @include lib-css(content, $_icon-font-color-hover);
+      }
+    }
+  }
+}
+
+
+/**
+ * Transition
+ */
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+/**
+ * Box shadow
+ */
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+/**
+ * Double box shadow
+ */
+@mixin box-shadow-double($shadow, $shadow2) {
+  -webkit-box-shadow: $shadow, $shadow2;
+  -moz-box-shadow: $shadow, $shadow2;
+  box-shadow: $shadow, $shadow2;
+}
+
+/**
+ * Remove box-shadow (for overruling box shadow mixin)
+ */
+@mixin no-box-shadow() {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/**
+ * Border radius
+ */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/**
+ * Retina background images
+ */
+@mixin background-image-2x($image, $width, $height) {
+  @media only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    /* On retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+/**
+ * Creates a CSS arrow
+ */
+@mixin arrow-without-border($direction, $size, $color) {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+
+  @if($direction == "left") {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  }
+
+  @if($direction == "right") {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  }
+
+  @if($direction == "up") {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  }
+
+  @if($direction == "down") {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  }
+}
+
+/**
+ * Creates a CSS arrow with a border
+ */
+@mixin arrow-with-border($direction, $size, $background, $borderColor) {
+  position: absolute;
+
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+
+    @if($direction == "down") {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-top: $size solid $borderColor;
+      bottom: -$size;
+      left: 50%;
+      margin-left: -$size;
+    }
+
+    @if($direction == "left") {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-right: $size solid $borderColor;
+      left: -$size;
+      top: 50%;
+    }
+
+    @if($direction == "right") {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-left: $size solid $borderColor;
+      right: -$size;
+      top: 50%;
+    }
+
+    @if($direction == "up") {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size solid $borderColor;
+      top: -$size;
+      left: 50%;
+    }
+
+    z-index: 10;
+  }
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+
+    @if($direction == "down") {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-top: $size solid $background;
+      bottom: -($size - 1);
+      left: 50%;
+      margin-left: -$size;
+    }
+
+    @if($direction == "left") {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-right: $size solid $background;
+      left: -($size - 1);
+      top: 50%;
+    }
+
+    @if($direction == "right") {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-left: $size solid $background;
+      right: -($size - 1);
+      top: 50%;
+    }
+
+    @if($direction == "up") {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size solid $background;
+      top: -($size - 1);
+      left: 50%;
+    }
+
+    z-index: 10;
+  }
+}
+
+
+@mixin _fa-icon( $icon, $family ){
+  font-family: $family;
+  content: $icon;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+@mixin bi-icon( $content ){
+  font-family: "byte" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: $content;
+}
+
+@mixin fas-icon( $icon ){ @include _fa-icon( $icon, "Font Awesome 5 Pro" ); font-weight: 900;  }
+@mixin far-icon( $icon ){ @include _fa-icon( $icon, "Font Awesome 5 Pro" ); font-weight: 400;  }
+@mixin fab-icon( $icon ){ @include _fa-icon( $icon, "Font Awesome 5 Brands" ); }
+
+@mixin lib-server-perspective(
+  $value: 2000px
+) {
+  perspective: $value;
+  -webkit-perspective: $value;
+  -moz-perspective: $value;
+}
+
+@mixin lib-animation($name) {
+  -webkit-animation: $name 1s ease-out forwards;
+  -moz-animation: $name 1s ease-out forwards;
+  -o-animation: $name 1s ease-out forwards;
+  animation: $name 1s ease-out forwards;
+}
+
+@mixin lib-animation-extended ($name, $time, $out, $method) {
+  -webkit-animation: $name $time $out $method;
+  -moz-animation: $name $time $out $method;
+  -o-animation: $name $time $out $method;
+  animation: $name $time $out $method;
+}
+
+@mixin lib-animation-more-extended ($name, $time, $out, $method, $end-name, $end-time, $end-out) {
+  -webkit-animation: $name $time $out $method, $end-name $end-time $end-out;
+  -moz-animation: $name $time $out $method, $end-name $end-time $end-out;
+  -o-animation: $name $time $out $method, $end-name $end-time $end-out;
+  animation: $name $time $out $method, $end-name $end-time $end-out;
+}
+
+@mixin lib-dark-theme () {
+  background-image: url('#{$baseDir}isometric-bg-dark.png'), -moz-linear-gradient(-45deg, $color-gradient-start-blue 0%, $color-another-blue 74%, $color-gradient-end-blue 100%);
+  background-image: url('#{$baseDir}isometric-bg-dark.png'), -webkit-linear-gradient(-45deg, $color-gradient-start-blue 0%, $color-another-blue 74%, $color-gradient-end-blue 100%);
+  background-image: url('#{$baseDir}isometric-bg-dark.png'), linear-gradient(135deg, $color-gradient-start-blue 0%, $color-another-blue 74%, $color-gradient-end-blue);
+}
+
+@mixin lib-list-item-blocks() {
+  column-count: auto;
+  text-align: center;
+  padding-left: 0;
+  li {
+    display: inline-block;
+    margin: 6px 4px;
+    padding: 2px 8px;
+    background-color: $color-white;
+    @include lib-font-size(11px);
+    @include lib-css(font-weight, $font-weight__semibold);
+  }
+  li::before {
+    content: none;
+  }
+}
+
+
+@mixin lib-user-select-none ( $value:none ) {
+  user-select: $value;
+  -moz-user-select: $value;
+  -webkit-user-select: $value;
+  -ms-user-select: $value;
+}
+
+@mixin lib-list-item-input() {
+  input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+@mixin lib-focus-outline ($value: none) {
+  &:focus {
+    outline: $value;
+  }
+  &:-moz-focusring {
+    outline: $value;
+  }
+}
+
+@mixin lib-focus-color ($value) {
+  &:focus {
+    @include lib-css(color, $value);
+  }
+  &:-moz-focusring {
+    @include lib-css(color, $value);
+  }
+}

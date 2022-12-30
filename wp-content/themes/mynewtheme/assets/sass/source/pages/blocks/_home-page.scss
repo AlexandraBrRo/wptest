@@ -1,0 +1,394 @@
+.main{
+  max-width: 1920px;
+}
+.background-wrapper {
+  background-image: url('../images/imgBG.png');
+  background-repeat: no-repeat;
+  max-height: 600px;
+  height: 100%;
+}
+.left-side{
+  max-width: 485px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 159px;
+  .title{
+    @include lib-font-size(56);
+    @include lib-line-height(60);
+    @include lib-css(font-weight, $font-weight__semibold);
+    font-family: $font-family__gilroy;
+  }
+  .description{
+    padding: 16px 0;
+    max-width: 398px;
+    @include lib-font-size(16);
+    @include lib-line-height(24);
+    @include lib-css(font-weight, $font-weight__400);
+  }
+}
+
+.buttons{
+  display: flex;
+  gap: 28px;
+  //justify-content: space-between;
+  .button-url{
+    color: $main-button-color;
+    padding-top: 10px;
+    //text-decoration: none;
+    @include lib-text-decoration-none();
+  }
+  .long-button{
+    padding: 10px 40px;
+    font-family: $font-family__gilroy;
+  }
+  .button-url, .long-button{
+    @include lib-font-size(16);
+    @include lib-line-height(24);
+    @include lib-css(font-weight, $font-weight__semibold);
+  }
+}
+.right-side{
+  position: relative;
+}
+.img-part{
+  >img{
+    //position: relative;
+    margin-top: -30px;
+    margin-right: -200px;
+    z-index: -10;
+  }
+}
+.txt-img{
+  position: absolute;
+  top: 77px;
+  left: 38px;
+  //z-index: 10;
+  color: $txt-color-img;
+}
+.txt1-img{
+  position: absolute;
+  top: 194px;
+  left: 48px;
+  z-index: 10;
+  color: $main-button-color;
+}
+.txt2-img{
+  position: absolute;
+  top: 296px;
+  left: 95px;
+  z-index: 10;
+}
+.txt3-img{
+  position: absolute;
+  top: 194px;
+  left: 472px;
+  z-index: 10;
+}
+.txt-img, .txt1-img,
+.txt2-img, .txt3-img{
+  @include lib-font-size(16);
+  @include lib-line-height(24);
+  @include lib-css(font-weight, $font-weight__400);
+}
+.line-txt{
+  width: 170px;
+  height: 1px;
+  background: $light-color-line;
+  z-index: 10;
+  display: block;
+  margin-top: 14px;
+  &:hover{
+    background: $hover-color-line;
+  }
+}
+.block-txt{
+  width: 132px;
+  padding-top: 14px;
+}
+.txt-right{
+  //display: flex;
+  //justify-content: flex-end;
+  text-align: right;
+}
+.move-txt{
+  padding-left: 37px;
+}
+
+.panel-list{
+  position: relative;
+  display: flex;
+  //width: 100%;
+  //flex: 0 0 100%;
+  flex-wrap: wrap;
+  .element-panel{
+    min-width: 282.5px;
+    background: $main-button-color;
+    height: 100px;
+    transform: translateY(-100px);
+  }
+}
+.rectangle-txt{
+  color: $main-button-text-color;
+  @include lib-font-size(24);
+  @include lib-line-height(60);
+  @include lib-css(font-weight, $font-weight__semibold);
+  @include lib-text-decoration-none();
+  font-family: $font-family__gilroy;
+  padding: 20px 77px;
+  display: block;
+  text-align: center;
+}
+
+.circulaire-block{
+  gap: 87px;
+  .circulaire-left{
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+  .circulaire-title{
+    @include lib-font-size(42);
+    @include lib-line-height(52);
+    @include lib-css(font-weight, $font-weight__400);
+    font-family: $font-family__gilroy;
+    font-style: normal;
+    //padding-top: 17px;
+    padding-bottom: 32px;
+    max-width: 255px;
+  }
+  .circulaire-img{
+    display: flex;
+    min-width: 523px;
+    >img{
+      display: block;
+      height: auto;
+    }
+    .img-centered{
+      padding: 0 24px;
+    }
+  }
+  .circulaire-txt-block{
+    padding-top: 17px;
+    .circulaire-text{
+      padding-bottom: 30px;
+    }
+    .circulaire-text-element{
+      @include lib-font-size(16);
+      @include lib-line-height(24);
+      @include lib-css(font-weight, $font-weight__400);
+      font-family: $font-family__gilroy;}
+    }
+  .title-list{
+    @include lib-font-size(16);
+    @include lib-line-height(24);
+    font-family: $font-family__gilroy;
+    padding-bottom: 15px;
+  }
+  .circulaire-list{
+    padding-left: 23px;
+    .decor-list{
+      list-style: none;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        @include lib-vendor-prefix-display();
+        border-radius: 50%;
+        transform: translateY(50%);
+        left: -23px;
+        height: 9px;
+        width: 9px;
+        background-color: $main-button-color;
+      }
+    }
+  }
+}
+.color-block{
+  background-color: $block-color;
+  .approved-block {
+    padding: 102px 0;
+  }
+  .approved-left{
+    width: 50%;
+    flex: 0 0 50%;
+    >img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+  .approved-right{
+    padding-left: 75px;
+    .approved-title{
+      @include lib-font-size(42);
+      @include lib-line-height(52);
+      @include lib-css(font-weight, $font-weight__400);
+      font-family: $font-family__gilroy;
+      font-style: normal;
+      max-width: 479px;
+    }
+    .approved-txt-block{
+      padding-top: 16px;
+      padding-bottom: 24px;
+      display: flex;
+      gap: 30px;
+      flex-direction: column;
+    }
+    .approved-text-element{
+      @include lib-font-size(16);
+      @include lib-line-height(24);
+      @include lib-css(font-weight, $font-weight__400);
+      font-family: $font-family__gilroy;
+      font-style: normal;
+    }
+    .long-btn{
+      padding: 10px 40px;
+      @include lib-font-size(16);
+      @include lib-line-height(24);
+      @include lib-css(font-weight, $font-weight__semibold);
+      font-family: $font-family__gilroy;
+      font-style: normal;
+    }
+  }
+}
+.flexit-block{
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+.flexit-left{
+  align-items: center;
+  padding-top: 20px;
+  >h2{
+    @include lib-font-size(42);
+    @include lib-line-height(52);
+    @include lib-css(font-weight, $font-weight__400);
+    font-family: $font-family__gilroy;
+    font-style: normal;
+  }
+  >h3{
+    @include lib-font-size(16);
+    @include lib-line-height(24);
+    @include lib-css(font-weight, $font-weight__400);
+    font-family: $font-family__gilroy;
+    font-style: normal;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    width: 454px;
+  }
+  .long-btn{
+    padding: 10px 40px;
+  }
+}
+.hp-block{
+  display: flex;
+  .hp-img{
+    width: 50%;
+    flex: 0 0 50%;
+    >img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+  .hp-txt{
+    padding-top: 105px;
+    padding-left: 53px;
+    padding-right: 280px;
+    >h2{
+      @include lib-font-size(42);
+      @include lib-line-height(52);
+      @include lib-css(font-weight, $font-weight__400);
+      font-family: $font-family__gilroy;
+      font-style: normal;
+    }
+    >h3{
+      @include lib-font-size(16);
+      @include lib-line-height(24);
+      @include lib-css(font-weight, $font-weight__400);
+      font-family: $font-family__gilroy;
+      font-style: normal;
+      padding-top: 16px;
+    }
+  }
+}
+.txt-form{
+  padding-top: 60px;
+  margin: 0 auto;
+  text-align: center;
+  .title-form{
+    @include lib-font-size(42);
+    @include lib-line-height(42);
+    @include lib-css(font-weight, $font-weight__400);
+    font-family: $font-family__gilroy;
+    font-style: normal;
+    padding-bottom: 8px;
+  }
+}
+
+.form-block{
+  //display: flex;
+  justify-content: center;
+
+  p{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 703px;
+    gap: 16px;
+
+  }
+  span{
+    .wpcf7-form-control-wrap{
+      width: 318px;
+    }
+  }
+    .wpcf7 input[type="text"],
+    .wpcf7 input[type="email"],
+    .wpcf7 textarea{
+      display: flex;
+      opacity: 0.3;
+      border: 1px solid #D4D3D3;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      padding-left: 24px;
+      &:focus{
+        outline: none;
+      }
+  }
+  .wpcf7-form-control{
+    //position: relative;
+  }
+  .wpcf7{
+    position: relative;
+    margin-bottom: 130px;
+  }
+  .wpcf7-submit{
+    position: absolute;
+    top: 340px;
+    left: 255px;
+  }
+
+  #green-btn{
+    background-color: $main-button-color;
+    padding: 12px 44px;
+    font-family: $font-family__gilroy;
+    @include lib-font-size(18);
+    @include lib-line-height(24);
+    @include lib-css(font-weight, $font-weight__semibold);
+    border: none;
+    color: $main-button-text-color;
+    border-radius: 24px;
+    max-height: 48px;
+  }
+  .wpcf7-textarea{
+    width: 682px;
+  }
+}
+
+
+@media screen and ( max-width: 425px) {
+
+}

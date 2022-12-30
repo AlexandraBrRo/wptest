@@ -1,0 +1,14 @@
+/*
+Theme Name: Mynewtheme
+Theme URI: https://my-site/
+Author: IdeaInYou
+Author URI: https://ideainyou.com/
+Description: Theme for Me
+Version: 1.0
+Text Domain: Red Monkey
+*/
+@font-face {
+  font-family: Gilroy;
+  src: url(http://wptest/home-page/);
+  font-weight: normal;
+}

@@ -1,0 +1,32 @@
+footer {
+  background: #231F20;
+  .wrapper{
+    display: block;
+  }
+  .logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid $footer-line-color;
+    img {
+      padding: 41px 0 32px;
+    }
+  }
+
+  .info-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0 34px;
+    >p{
+      @include lib-font-size(14);
+      @include lib-line-height(22);
+      @include lib-css(font-weight, $font-weight__400);
+      font-family: $font-family__gilroy;
+      color: $main-button-text-color;
+      opacity: 0.5;
+    }
+  }
+}

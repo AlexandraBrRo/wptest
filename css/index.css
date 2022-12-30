@@ -1,0 +1,50 @@
+.e-kit-library__index-layout-container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.e-kit-library__index-layout-top-area {
+  padding: spacing(30) spacing(44);
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  width: 100%;
+  z-index: 2;
+  background-color: var(--app-background-color);
+  gap: spacing(24);
+}
+.e-kit-library__index-layout-top-area-search, .e-kit-library__index-layout-top-area-sort {
+  min-width: 265px;
+}
+.e-kit-library__index-layout-top-area-search {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.e-kit-library__index-layout-main {
+  padding-top: spacing(0);
+  padding-bottom: spacing(24);
+  overflow-y: hidden;
+  height: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}/*# sourceMappingURL=index.css.map */

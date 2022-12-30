@@ -1,0 +1,13 @@
+.e-app-import-export-content-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+.e-app-import-export-content-layout__container {
+  -ms-flex-preferred-size: 1075px;
+      flex-basis: 1075px;
+}/*# sourceMappingURL=content-layout.css.map */

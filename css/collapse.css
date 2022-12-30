@@ -1,0 +1,52 @@
+.eps-collapse__title {
+  cursor: pointer;
+  padding: spacing(5) 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+.eps-collapse__title:focus {
+  outline: none;
+}
+.eps-collapse__icon {
+  -webkit-transition: all 150ms;
+  -o-transition: all 150ms;
+  transition: all 150ms;
+  -webkit-transform: rotate(getValueByDirection(0deg, 180deg));
+      -ms-transform: rotate(getValueByDirection(0deg, 180deg));
+          transform: rotate(getValueByDirection(0deg, 180deg));
+}
+.eps-collapse__content {
+  margin-top: spacing(10);
+  display: none;
+}
+.eps-collapse[data-open] .eps-collapse__content {
+  display: block;
+}
+.eps-collapse[data-open] .eps-collapse__icon {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}/*# sourceMappingURL=collapse.css.map */}
+.e-app-collapse--opened .e-app-collapse-content {
+  display: block;
+}
+
+[dir=rtl] .e-app-collapse-toggle__icon {
+  right: initial;
+  left: var(--e-app-collapse-toggle-icon-spacing);
+}
+
+.eps-theme-dark .e-app-collapse {
+  --e-app-collapse-icon-color: dark-tints(200);
+}/*# sourceMappingURL=collapse.css.map */

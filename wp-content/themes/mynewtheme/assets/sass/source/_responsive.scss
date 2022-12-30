@@ -1,0 +1,14 @@
+$screen_mobile_s: 425px;
+$screen_mobile: 768px;
+$screen_iPad_portrait: 992px;
+$screen_iPad_landscape: 1200px;
+$screen_desktop: 1440px;
+$screen_desktop_l: 1920px;
+
+
+$media_mobile_s: (max-width: $screen_mobile_s);
+$media_mobile: (max-width: $screen_mobile);
+$media_iPad_portrait: (max-width: $screen_iPad_portrait);
+$media_iPad_landscape: (max-width: $screen_iPad_landscape);
+$media_desktop: (max-width: $screen_desktop);
+$media_desktop_l: (min-width: $screen_desktop_l);

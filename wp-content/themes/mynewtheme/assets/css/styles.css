@@ -1,0 +1,486 @@
+@font-face {
+  font-family: Gilroy;
+  src: url("/wp-content/themes/mynewtheme/assets/fonts/Gilroy");
+  font-weight: normal;
+}
+.main-button {
+  background-color: #00AE8E;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 100px;
+  text-decoration: none;
+}
+
+/**
+ * Transition
+ */
+/**
+ * Box shadow
+ */
+/**
+ * Double box shadow
+ */
+/**
+ * Remove box-shadow (for overruling box shadow mixin)
+ */
+/**
+ * Border radius
+ */
+/**
+ * Retina background images
+ */
+/**
+ * Creates a CSS arrow
+ */
+/**
+ * Creates a CSS arrow with a border
+ */
+.wrapper {
+  max-width: 1130px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+footer {
+  background: #231F20;
+}
+footer .wrapper {
+  display: block;
+}
+footer .logo-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #7B7979;
+}
+footer .logo-footer img {
+  padding: 41px 0 32px;
+}
+footer .info-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0 34px;
+}
+footer .info-footer > p {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  font-family: "Gilroy";
+  color: #fff;
+  opacity: 0.5;
+}
+
+.main {
+  max-width: 1920px;
+}
+
+.background-wrapper {
+  background-image: url("../images/imgBG.png");
+  background-repeat: no-repeat;
+  max-height: 600px;
+  height: 100%;
+}
+
+.left-side {
+  max-width: 485px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 159px;
+}
+.left-side .title {
+  font-size: 3.5rem;
+  line-height: 3.75rem;
+  font-weight: 600;
+  font-family: "Gilroy";
+}
+.left-side .description {
+  padding: 16px 0;
+  max-width: 398px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.buttons {
+  display: flex;
+  gap: 28px;
+}
+.buttons .button-url {
+  color: #00AE8E;
+  padding-top: 10px;
+  text-decoration: none;
+}
+.buttons .long-button {
+  padding: 10px 40px;
+  font-family: "Gilroy";
+}
+.buttons .button-url, .buttons .long-button {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.right-side {
+  position: relative;
+}
+
+.img-part > img {
+  margin-top: -30px;
+  margin-right: -200px;
+  z-index: -10;
+}
+
+.txt-img {
+  position: absolute;
+  top: 77px;
+  left: 38px;
+  color: #006C55;
+}
+
+.txt1-img {
+  position: absolute;
+  top: 194px;
+  left: 48px;
+  z-index: 10;
+  color: #00AE8E;
+}
+
+.txt2-img {
+  position: absolute;
+  top: 296px;
+  left: 95px;
+  z-index: 10;
+}
+
+.txt3-img {
+  position: absolute;
+  top: 194px;
+  left: 472px;
+  z-index: 10;
+}
+
+.txt-img, .txt1-img,
+.txt2-img, .txt3-img {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.line-txt {
+  width: 170px;
+  height: 1px;
+  background: #02B4A5;
+  z-index: 10;
+  display: block;
+  margin-top: 14px;
+}
+.line-txt:hover {
+  background: #202020;
+}
+
+.block-txt {
+  width: 132px;
+  padding-top: 14px;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.move-txt {
+  padding-left: 37px;
+}
+
+.panel-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.panel-list .element-panel {
+  min-width: 282.5px;
+  background: #00AE8E;
+  height: 100px;
+  transform: translateY(-100px);
+}
+
+.rectangle-txt {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 3.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Gilroy";
+  padding: 20px 77px;
+  display: block;
+  text-align: center;
+}
+
+.circulaire-block {
+  gap: 87px;
+}
+.circulaire-block .circulaire-left {
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+.circulaire-block .circulaire-title {
+  font-size: 2.625rem;
+  line-height: 3.25rem;
+  font-weight: 400;
+  font-family: "Gilroy";
+  font-style: normal;
+  padding-bottom: 32px;
+  max-width: 255px;
+}
+.circulaire-block .circulaire-img {
+  display: flex;
+  min-width: 523px;
+}
+.circulaire-block .circulaire-img > img {
+  display: block;
+  height: auto;
+}
+.circulaire-block .circulaire-img .img-centered {
+  padding: 0 24px;
+}
+.circulaire-block .circulaire-txt-block {
+  padding-top: 17px;
+}
+.circulaire-block .circulaire-txt-block .circulaire-text {
+  padding-bottom: 30px;
+}
+.circulaire-block .circulaire-txt-block .circulaire-text-element {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-family: "Gilroy";
+}
+.circulaire-block .title-list {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: "Gilroy";
+  padding-bottom: 15px;
+}
+.circulaire-block .circulaire-list {
+  padding-left: 23px;
+}
+.circulaire-block .circulaire-list .decor-list {
+  list-style: none;
+  position: relative;
+}
+.circulaire-block .circulaire-list .decor-list::before {
+  content: "";
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  transform: translateY(50%);
+  left: -23px;
+  height: 9px;
+  width: 9px;
+  background-color: #00AE8E;
+}
+
+.color-block {
+  background-color: #F4F4F4;
+}
+.color-block .approved-block {
+  padding: 102px 0;
+}
+.color-block .approved-left {
+  width: 50%;
+  flex: 0 0 50%;
+}
+.color-block .approved-left > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+.color-block .approved-right {
+  padding-left: 75px;
+}
+.color-block .approved-right .approved-title {
+  font-size: 2.625rem;
+  line-height: 3.25rem;
+  font-weight: 400;
+  font-family: "Gilroy";
+  font-style: normal;
+  max-width: 479px;
+}
+.color-block .approved-right .approved-txt-block {
+  padding-top: 16px;
+  padding-bottom: 24px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+.color-block .approved-right .approved-text-element {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-family: "Gilroy";
+  font-style: normal;
+}
+.color-block .approved-right .long-btn {
+  padding: 10px 40px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: "Gilroy";
+  font-style: normal;
+}
+
+.flexit-block {
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
+.flexit-left {
+  align-items: center;
+  padding-top: 20px;
+}
+.flexit-left > h2 {
+  font-size: 2.625rem;
+  line-height: 3.25rem;
+  font-weight: 400;
+  font-family: "Gilroy";
+  font-style: normal;
+}
+.flexit-left > h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-family: "Gilroy";
+  font-style: normal;
+  padding-top: 16px;
+  padding-bottom: 24px;
+  width: 454px;
+}
+.flexit-left .long-btn {
+  padding: 10px 40px;
+}
+
+.hp-block {
+  display: flex;
+}
+.hp-block .hp-img {
+  width: 50%;
+  flex: 0 0 50%;
+}
+.hp-block .hp-img > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+.hp-block .hp-txt {
+  padding-top: 105px;
+  padding-left: 53px;
+  padding-right: 280px;
+}
+.hp-block .hp-txt > h2 {
+  font-size: 2.625rem;
+  line-height: 3.25rem;
+  font-weight: 400;
+  font-family: "Gilroy";
+  font-style: normal;
+}
+.hp-block .hp-txt > h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-family: "Gilroy";
+  font-style: normal;
+  padding-top: 16px;
+}
+
+.txt-form {
+  padding-top: 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+.txt-form .title-form {
+  font-size: 2.625rem;
+  line-height: 2.625rem;
+  font-weight: 400;
+  font-family: "Gilroy";
+  font-style: normal;
+  padding-bottom: 8px;
+}
+
+.form-block {
+  justify-content: center;
+}
+.form-block p {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 703px;
+  gap: 16px;
+}
+.form-block span .wpcf7-form-control-wrap {
+  width: 318px;
+}
+.form-block .wpcf7 input[type=text],
+.form-block .wpcf7 input[type=email],
+.form-block .wpcf7 textarea {
+  display: flex;
+  opacity: 0.3;
+  border: 1px solid #D4D3D3;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 24px;
+}
+.form-block .wpcf7 input[type=text]:focus,
+.form-block .wpcf7 input[type=email]:focus,
+.form-block .wpcf7 textarea:focus {
+  outline: none;
+}
+.form-block .wpcf7 {
+  position: relative;
+  margin-bottom: 130px;
+}
+.form-block .wpcf7-submit {
+  position: absolute;
+  top: 340px;
+  left: 255px;
+}
+.form-block #green-btn {
+  background-color: #00AE8E;
+  padding: 12px 44px;
+  font-family: "Gilroy";
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  border-radius: 24px;
+  max-height: 48px;
+}
+.form-block .wpcf7-textarea {
+  width: 682px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

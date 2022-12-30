@@ -1,0 +1,29 @@
+$font-weight__light: 300;
+$font-weight__regular: 300;
+$font-weight__400: 400;
+$font-weight__heavier: 500;
+$font-weight__semibold: 600;
+$font-weight__bold: 700;
+$font-weight__extrabold: 800;
+$font-weight__heavy: 900;
+
+$form-element-input-placeholder__color: rgb(117, 117, 117);
+$form-element-input__font-weight: $font-weight__regular;
+
+$font-size__base: 16px;
+$font-size-unit: rem;
+$font-family__gilroy: 'Gilroy';
+$font-family__montserrat: 'Montserrat';
+$font-family__open_sans: 'Open Sans';
+$font-family__base: $font-family__gilroy, sans-serif;
+$font-family__base_symfony: $font-family__base;
+$font-family__primary_symfony: $font-family__open_sans;
+
+$icon-font__size: $font-size__base;
+$icon-line__height: $icon-font__size;
+$icon-font__color: $color_black;
+$icon-font__color-hover: $color-black;
+$icon-font-display: inline-block;
+$icon-font-transition: all 0.5s;
+$icon-font-vertical-align: middle;
+$checkboxSize: 20px;

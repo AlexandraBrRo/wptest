@@ -483,4 +483,9 @@ footer .info-footer > p {
   padding: 0;
 }
 
+img {
+  overflow: hidden;
+  height: auto;
+}
+
 /*# sourceMappingURL=styles.css.map */
